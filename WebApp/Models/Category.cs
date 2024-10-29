@@ -1,10 +1,14 @@
-﻿using System.Net.Sockets;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Net.Sockets;
 
 namespace WebApp.Models;
 
 public enum Category
 {
-    Family,
-    Friend,
-    Business
+    [Display(Name = "Rodzina", Order = 1)]
+    Family = 1,
+    [Display(Name = "Znajomi", Order = 3)]
+    Friend = 2,
+    [Display(Name = "Kontakt biznesowy", Order = 2)]
+    Business = 3
 }
