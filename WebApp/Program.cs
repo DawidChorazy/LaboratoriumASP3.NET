@@ -1,5 +1,3 @@
-using WebApp.Models;
-
 namespace WebApp;
 
 public class Program
@@ -9,8 +7,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-        builder.Services.AddDbContext<Data.AppDbContext>();
-        builder.Services.AddTransient<IContactService, EFContactService>();
+        builder.Services.AddControllersWithViews();
 
         var app = builder.Build();
 

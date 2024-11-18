@@ -1,4 +1,6 @@
-﻿namespace WebApp.Models;
+﻿using Data.Entities;
+
+namespace WebApp.Models;
 
 public class MemoryContactService: IContactService
 {
@@ -25,6 +27,12 @@ public class MemoryContactService: IContactService
     {
         return _items[id];
     }
+
+    public List<OrganizationEntity> FindAllOrganizationsForVieModel()
+    {
+        throw new NotImplementedException();
+    }
+
 
     public void Update(ContactModel item)
     {

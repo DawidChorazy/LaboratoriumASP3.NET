@@ -39,6 +39,11 @@ public class EFContactService : IContactService
         return ContactMapper.FromEntity(_context.Contacts.Find(id));
     }
 
+    public List<OrganizationEntity> FindAllOrganizationsForVieModel()
+    {
+        return _context.Organizations.ToList();
+    }
+
     public void Update(ContactModel contact)
     {
         _context.Contacts.Update(ContactMapper.ToEntity(contact));
