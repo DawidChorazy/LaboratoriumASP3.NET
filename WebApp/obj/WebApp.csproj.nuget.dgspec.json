@@ -4,14 +4,14 @@
     "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\Data\\Data.csproj": {
+    "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\EFData\\EFData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\Data\\Data.csproj",
-        "projectName": "Data",
-        "projectPath": "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\EFData\\EFData.csproj",
+        "projectName": "EFData",
+        "projectPath": "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\EFData\\EFData.csproj",
         "packagesPath": "C:\\Users\\niecw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\Data\\obj\\",
+        "outputPath": "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\EFData\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\niecw\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -100,9 +100,6 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\Data\\Data.csproj"
-              },
               "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\EFData\\EFData.csproj": {
                 "projectPath": "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\EFData\\EFData.csproj"
               }

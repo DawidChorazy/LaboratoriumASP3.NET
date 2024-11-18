@@ -18,4 +18,6 @@ public class ContactEntity
     public string Phone {  get; set; }
     [Column("birth_date")]
     public DateOnly Birth { get; set; }
+    public int OrganizationId { get; set; }
+    public OrganizationEntity? Organization { get; set; }
 }

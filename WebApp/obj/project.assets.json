@@ -465,7 +465,7 @@
           "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
-      "Data/1.0.0": {
+      "EFData/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
@@ -473,10 +473,10 @@
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0"
         },
         "compile": {
-          "bin/placeholder/Data.dll": {}
+          "bin/placeholder/EFData.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Data.dll": {}
+          "bin/placeholder/EFData.dll": {}
         }
       }
     }
@@ -1120,16 +1120,15 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Data/1.0.0": {
+    "EFData/1.0.0": {
       "type": "project",
-      "path": "../Data/Data.csproj",
-      "msbuildProject": "../Data/Data.csproj"
+      "path": "../EFData/EFData.csproj",
+      "msbuildProject": "../EFData/EFData.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\EFData\\EFData.csproj",
-      "Data >= 1.0.0"
+      "EFData >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1157,9 +1156,6 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\Data\\Data.csproj"
-            },
             "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\EFData\\EFData.csproj": {
               "projectPath": "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\EFData\\EFData.csproj"
             }
@@ -1202,16 +1198,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\EFData\\EFData.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\niecw\\RiderProjects\\LaboratoriumASP3.NET\\EFData\\EFData.csproj",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  }
 }
