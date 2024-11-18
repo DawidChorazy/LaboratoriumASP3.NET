@@ -31,4 +31,7 @@ public class ContactModel
     public string PhoneNumber { get; set; }
     
     public Category Category { get; set; }
+    
+    [Display(Name = "Priorytet")]
+    public Priority Priority { get; set; }
 }

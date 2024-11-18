@@ -43,6 +43,15 @@
             <select class="form-control"asp-for="Category"/>
             <span asp-validation-for="Category" class = "text-danger"></span>
         </div>
+
+        <div>
+            <label asp-for="Priority"></label>
+            <div>
+                <span asp-validation-for="Priority" class="text-danger"></span>
+            </div>
+            <select class="form-control" asp-for="Priority" asp-items="@Html.GetEnumSelectList<Category>()"></select>
+        </div>
+        
         <button class ="btn btn-primary">Save</button>
     </form>
 </div>
