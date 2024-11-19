@@ -1,9 +1,11 @@
 ﻿using Data.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data;
 
-public class AppDbContext : DbContext 
+public class AppDbContext : IdentityDbContext<IdentityUser>
 { 
     public DbSet<ContactEntity> Contacts { get; set; } 
     public DbSet<OrganizationEntity> Organizations { get; set; }
@@ -19,7 +21,14 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-   
+        
+        base.OnModelCreating(modelBuilder);
+        
+        string ADMIN_ID = Guid.NewGuid().ToString();
+        string ROLE_ID = Guid.NewGuid().ToString();
+        string USER_ROLE_ID = Guid.NewGuid().ToString();
+        string USER_ID = Guid.NewGuid().ToString();
+        
         modelBuilder.Entity<ContactEntity>()
             .HasOne(e => e.Organization)
             .WithMany(o => o.Contacts)
@@ -60,14 +69,39 @@ public class AppDbContext : DbContext
                 Email = "Ewa",
                 Phone = "02879283",
                 OrganizationId = 2,
-            }
-        );
-        modelBuilder.Entity<OrganizationEntity>()
-            .OwnsOne(e => e.Address)
-            .HasData(
-                new { OrganizationEntityId = 101, City = "Kraków", Street = "Św. Filipa 17", PostalCode = "31-150", Region = "małopolskie" },
-                new { OrganizationEntityId = 102, City = "Kraków", Street = "Krowoderska 45/6", PostalCode = "31-150", Region = "małopolskie" }
-            );
+            });
+            modelBuilder.Entity<IdentityRole>().HasData(new IdentityRole
+            {
+                Name = "admin",
+                NormalizedName = "ADMIN",
+                Id = ROLE_ID,
+                ConcurrencyStamp = ROLE_ID
+            });
+                
+            var admin = new IdentityUser
+                {
+                    Id = ADMIN_ID,
+                    Email = "adam@wsei.edu.pl",
+                    EmailConfirmed = true,
+                    UserName = "adam",
+                    NormalizedUserName = "ADMIN",
+                    NormalizedEmail = "ADAM@WSEI.EDU.PL"
+                };
+                PasswordHasher<IdentityUser> ph = new PasswordHasher<IdentityUser>();
+                admin.PasswordHash = ph.HashPassword(admin, "1234abcd!@#$ABCD");
+                modelBuilder.Entity<IdentityUser>().HasData(admin);
+                
+                modelBuilder.Entity<IdentityUserRole<string>>()
+                    .HasData(new IdentityUserRole<string>
+                    {
+                        RoleId = ROLE_ID,
+                        UserId = ADMIN_ID
+                    });
+                new IdentityUserRole<string>()
+                {
+                    RoleId = USER_ROLE_ID,
+                    UserId = USER_ID
+                };
     }
     
 } 

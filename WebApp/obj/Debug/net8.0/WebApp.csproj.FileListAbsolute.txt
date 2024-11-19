@@ -62,3 +62,6 @@ C:\Users\niecw\RiderProjects\LaboratoriumASP3.NET\WebApp\obj\Debug\net8.0\refint
 C:\Users\niecw\RiderProjects\LaboratoriumASP3.NET\WebApp\obj\Debug\net8.0\WebApp.pdb
 C:\Users\niecw\RiderProjects\LaboratoriumASP3.NET\WebApp\obj\Debug\net8.0\WebApp.genruntimeconfig.cache
 C:\Users\niecw\RiderProjects\LaboratoriumASP3.NET\WebApp\obj\Debug\net8.0\ref\WebApp.dll
+D:\Users\dawid.chorazy\RiderProjects\LaboratoriumASP3.NET\WebApp\obj\Debug\net8.0\WebApp.dll
+D:\Users\dawid.chorazy\RiderProjects\LaboratoriumASP3.NET\WebApp\obj\Debug\net8.0\refint\WebApp.dll
+D:\Users\dawid.chorazy\RiderProjects\LaboratoriumASP3.NET\WebApp\obj\Debug\net8.0\WebApp.pdb
